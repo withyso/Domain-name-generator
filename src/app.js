@@ -9,26 +9,26 @@ window.onload = function() {
   //write your code here
   console.log("Hello world");
 
-  let pronoun = ["the", "our", "their", "your"];
-  let adj = ["great", "big", "small", "tall", "fast", "fat"];
-  let nouns = ["racoon", "apple", "orange", "cat", "dog", "burger"];
-  let domain = [".com", ".es", ".gob", ".net"];
+  let pronoun = ["the", "our", "your"];
+  let adj = ["great", "big", "small"];
+  let nouns = ["racoon", "apple", "cat"];
+  let domain = [".com", ".net"];
 
-  for (let i = 0; i < 4; i++) {
-    console.log(`${pronoun[i]}` + `${adj[i]}` + `${nouns[i]}` + `${domain[i]}`);
+  function iteracionesDeArreglos(arr1, arr2, arr3, arr4) {
+    for (let arr0Index = 0; arr0Index < arr1.length; arr0Index++) {
+      for (let arr2Index = 0; arr2Index < arr2.length; arr2Index++) {
+        for (let arr3Index = 0; arr3Index < arr3.length; arr3Index++) {
+          for (let arr4Index = 0; arr4Index < arr4.length; arr4Index++)
+            console.log(
+              arr1[arr0Index] +
+                arr2[arr2Index] +
+                arr3[arr3Index] +
+                arr4[arr4Index]
+            );
+        }
+      }
+    }
   }
 
-  let randomWord = element => {
-    let randomIndex = Math.floor(Math.random() * element.length);
-    return element[randomIndex];
-  };
-
-  for (let i = 0; i < 15; i++) {
-    console.log(
-      `${randomWord(pronoun)}` +
-        `${randomWord(adj)}` +
-        `${randomWord(nouns)}` +
-        `${randomWord(domain)}`
-    );
-  }
+  iteracionesDeArreglos(pronoun, adj, nouns, domain);
 };
