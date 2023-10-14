@@ -20,10 +20,7 @@ window.onload = function() {
         for (let arr3Index = 0; arr3Index < arr3.length; arr3Index++) {
           for (let arr4Index = 0; arr4Index < arr4.length; arr4Index++)
             console.log(
-              arr1[arr0Index] +
-                arr2[arr2Index] +
-                arr3[arr3Index] +
-                arr4[arr4Index]
+              `${arr1[arr0Index]} ${arr2[arr2Index]} ${arr3[arr3Index]} ${arr4[arr4Index]}`
             );
         }
       }
